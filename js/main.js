@@ -4,11 +4,92 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initNavbar();
   initProjectFilters();
   initLightbox();
   initContactForm();
 });
+
+/* --------------------------------------------------------------------------
+   0. Starting Screen Animation (Royal Enfield Style Preloader)
+   -------------------------------------------------------------------------- */
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  const fill = document.getElementById('preloaderFill');
+  const circleFill = document.getElementById('preloaderCircleFill');
+  const percent = document.getElementById('preloaderPercent');
+  const status = document.getElementById('preloaderStatus');
+
+  if (!preloader) return;
+
+  const duration = 1800; // 1.8s luxury timing
+  const startTime = performance.now();
+  const circleCircumference = 289.03; // 2 * PI * 46
+
+  if (circleFill) {
+    circleFill.style.strokeDasharray = `${circleCircumference}`;
+    circleFill.style.strokeDashoffset = `${circleCircumference}`;
+  }
+
+  const statuses = [
+    { at: 0, text: 'INITIALIZING ARCHITECTURE...' },
+    { at: 25, text: 'LOADING AI & DRONE TELEMETRY...' },
+    { at: 55, text: 'VERIFYING INSTITUTIONAL REPOSITORIES...' },
+    { at: 85, text: 'OPTIMIZING SYSTEM WORKFLOWS...' },
+    { at: 100, text: 'PORTFOLIO READY' }
+  ];
+
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // Smooth luxury ease: cubic-bezier deceleration
+    const eased = 1 - Math.pow(1 - progress, 3.2);
+    const currentPercent = Math.min(Math.floor(eased * 100), 100);
+
+    if (fill) fill.style.width = `${currentPercent}%`;
+    if (circleFill) {
+      circleFill.style.strokeDashoffset = `${circleCircumference * (1 - eased)}`;
+    }
+    if (percent) {
+      percent.textContent = `${String(currentPercent).padStart(2, '0')}%`;
+    }
+
+    if (status) {
+      for (let i = statuses.length - 1; i >= 0; i--) {
+        if (currentPercent >= statuses[i].at) {
+          status.textContent = statuses[i].text;
+          break;
+        }
+      }
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+        document.body.classList.add('page-revealed');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 1100);
+      }, 240);
+    }
+  }
+
+  requestAnimationFrame(update);
+
+  // Safety fallback
+  setTimeout(() => {
+    if (!preloader.classList.contains('loaded')) {
+      preloader.classList.add('loaded');
+      document.body.classList.add('page-revealed');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1100);
+    }
+  }, 3200);
+}
 
 /* --------------------------------------------------------------------------
    1. Navbar & Mobile Navigation

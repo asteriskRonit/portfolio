@@ -27,6 +27,46 @@
 <body>
 
   <!-- ==========================================================================
+       Starting Screen Animation (Executive Luxury Preloader)
+       ========================================================================== -->
+  <div id="preloader" class="preloader" aria-hidden="false">
+    <div class="preloader-panel preloader-panel-top"></div>
+    <div class="preloader-panel preloader-panel-bottom"></div>
+    <div class="preloader-ambient"></div>
+    
+    <div class="preloader-content">
+      <!-- Luxury Precision Emblem with SVG Tracing Ring -->
+      <div class="preloader-emblem-wrap">
+        <svg class="preloader-svg-ring" viewBox="0 0 100 100">
+          <circle class="preloader-circle-bg" cx="50" cy="50" r="46"></circle>
+          <circle class="preloader-circle-fill" id="preloaderCircleFill" cx="50" cy="50" r="46"></circle>
+        </svg>
+        <div class="preloader-avatar-frame">
+          <img src="images/avatar.jpg" alt="Ronit Paul" class="preloader-avatar">
+        </div>
+      </div>
+
+      <!-- Typography -->
+      <div class="preloader-brand">
+        <div class="preloader-eyebrow">PORTFOLIO &bull; ENGINEERING SYSTEMS</div>
+        <h1 class="preloader-title">RONIT PAUL</h1>
+        <p class="preloader-subtitle">COMPUTER SCIENCE &bull; AI &bull; DRONE AVIONICS</p>
+      </div>
+
+      <!-- Precision Progress Bar & Digital Readout -->
+      <div class="preloader-progress-box">
+        <div class="preloader-track">
+          <div class="preloader-bar" id="preloaderFill"></div>
+        </div>
+        <div class="preloader-telemetry">
+          <span class="preloader-status" id="preloaderStatus">INITIALIZING ARCHITECTURE...</span>
+          <span class="preloader-counter" id="preloaderPercent">00%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
        Navigation Bar (Custom Avatar Icon in Place of Navbar Name)
        ========================================================================== -->
   <header class="header">
@@ -73,7 +113,8 @@
             <span class="hero-eyebrow">Portfolio &amp; Engineering Works</span>
             <h1 class="hero-name">Ronit Paul</h1>
             <p class="hero-subtitle">
-              Computer Science Engineer, AI Developer, Trainer and Certified Drone Trainer building high-impact and future proof system 
+              Computer Science Engineer, AI Developer, Trainer and Certified Drone Trainer building high-impact systems .
+            </p>
 
             <div class="hero-creds-strip">
               <div class="hero-cred-item">
@@ -154,7 +195,7 @@
                   <div class="slide-content">
                     <div class="slide-meta">
                       <span class="slide-badge">Healthcare Diagnostics</span>
-                      <span class="slide-number">01 / 07</span>
+                      <span class="slide-number">01 / 08</span>
                     </div>
                     <h3 class="slide-title">SmartDiag: AI Medical Diagnostic System</h3>
                     <div class="slide-tags">
@@ -176,7 +217,7 @@
                   <div class="slide-content">
                     <div class="slide-meta">
                       <span class="slide-badge">Assistive AI</span>
-                      <span class="slide-number">02 / 07</span>
+                      <span class="slide-number">02 / 08</span>
                     </div>
                     <h3 class="slide-title">SignVert: Indian Sign Language Assistant</h3>
     
@@ -194,7 +235,7 @@
                   <div class="slide-content">
                     <div class="slide-meta">
                       <span class="slide-badge">Technology Showcase</span>
-                      <span class="slide-number">03 / 07</span>
+                      <span class="slide-number">03 / 08</span>
                     </div>
                     <h3 class="slide-title">Startup Tripura: Robotics &amp; IoT Pavilion</h3>
                     <div class="slide-actions">
@@ -203,24 +244,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Slide 4: NCC Memento -->
-              <div class="slide-item" data-index="3">
-                <img src="images/pic3.jpeg" alt="Receiving CATC-118 Memento from 15 Tripura BN NCC" class="slide-bg-img">
-                <div class="slide-overlay">
-                  <div class="slide-content">
-                    <div class="slide-meta">
-                      <span class="slide-badge">Defense Honor</span>
-                      <span class="slide-number">04 / 07</span>
-                    </div>
-                    <h3 class="slide-title">15 Tripura BN NCC: CATC-118 Memento</h3>
-                    <div class="slide-actions">
-                      <button class="btn-view-full" aria-label="Enlarge image"><i class="fa-solid fa-expand"></i> View Full</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <!-- Slide 5: Cybersecurity Camp -->
               <div class="slide-item" data-index="4">
                 <img src="images/pic2.jpeg" alt="Delivering Cyber Security and Phishing Defense Lecture" class="slide-bg-img">
@@ -228,10 +251,12 @@
                   <div class="slide-content">
                     <div class="slide-meta">
                       <span class="slide-badge">Cybersecurity Masterclass</span>
-                      <span class="slide-number">05 / 07</span>
+                      <span class="slide-number">04 / 08</span>
                     </div>
                     <h3 class="slide-title">Cyber Security &amp; Cyber Attack Defence</h3>
                     <p class="slide-desc">
+                      Delivering cybersecurity defense and anti-phishing training to NCC cadet cohorts at the annual camp.
+                    </p>
                     <div class="slide-actions">
                       <button class="btn-view-full" aria-label="Enlarge image"><i class="fa-solid fa-expand"></i> View Full</button>
                     </div>
@@ -246,9 +271,12 @@
                   <div class="slide-content">
                     <div class="slide-meta">
                       <span class="slide-badge">Technical Keynote</span>
-                      <span class="slide-number">06 / 07</span>
+                      <span class="slide-number">05 / 08</span>
                     </div>
                     <h3 class="slide-title">Plenary Keynote: Cyber Attacks &amp; AI Systems</h3>
+                    <p class="slide-desc">
+                      Plenary address to 150+ students on software design, machine learning pipelines, and tech careers.
+                    </p>
                     <div class="slide-actions">
                       <button class="btn-view-full" aria-label="Enlarge image"><i class="fa-solid fa-expand"></i> View Full</button>
                     </div>
@@ -256,22 +284,65 @@
                 </div>
               </div>
 
-              <!-- Slide 7: -->
+              <!-- Slide 7: Drone Workshop -->
               <div class="slide-item" data-index="6">
                 <img src="images/pic5.jpeg" alt="Drone Avionics and Assembly Instruction at DTC TIT" class="slide-bg-img">
                 <div class="slide-overlay">
                   <div class="slide-content">
                     <div class="slide-meta">
-                      <span class="slide-badge">Cyber</span>
-                      <span class="slide-number">07 / 07</span>
+                      <span class="slide-badge">Aerospace Engineering</span>
+                      <span class="slide-number">06 / 08</span>
                     </div>
-                    <h3 class="slide-title">Cyber Security Awarness &amp; Prevention</h3>
+                    <h3 class="slide-title">Cyber Security Awareness</h3>
+                    <p class="slide-desc">
+                      Provided practical training on AI tools and techniques to protect against cyberattacks.
+                    </p>
                     <div class="slide-actions">
                       <button class="btn-view-full" aria-label="Enlarge image"><i class="fa-solid fa-expand"></i> View Full</button>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Slide 8: Keynote -->
+              <div class="slide-item" data-index="5">
+                <img src="images/pic8.jpeg" alt="Auditorium Keynote for Over 150 Attendees" class="slide-bg-img">
+                <div class="slide-overlay">
+                  <div class="slide-content">
+                    <div class="slide-meta">
+                      <span class="slide-badge">Technical Keynote</span>
+                      <span class="slide-number">07 / 08</span>
+                    </div>
+                    <h3 class="slide-title">Plenary Keynote: Cyber Attacks &amp; Precaution on this Attack </h3>
+                    <p class="slide-desc">
+                      Addressing the future cadets of the NCC on real-world cyberattacks, their impact on systems and networks, and effective techniques for protecting against such threats.
+                    </p>
+                    <div class="slide-actions">
+                      <button class="btn-view-full" aria-label="Enlarge image"><i class="fa-solid fa-expand"></i> View Full</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Slide 9: Keynote -->
+              <div class="slide-item" data-index="5">
+                <img src="images/pic9.jpeg" alt="Auditorium Keynote for Over 150 Attendees" class="slide-bg-img">
+                <div class="slide-overlay">
+                  <div class="slide-content">
+                    <div class="slide-meta">
+                      <span class="slide-badge">Technical Keynote</span>
+                      <span class="slide-number">08 / 08</span>
+                    </div>
+                    <h3 class="slide-title">Smartqr Demonstrating </h3>
+                    <p class="slide-desc">
+                      Demonstrating the SmartQR project, a real-time campus navigation system, to the TPSC officer.
+                    </p>
+                    <div class="slide-actions">
+                      <button class="btn-view-full" aria-label="Enlarge image"><i class="fa-solid fa-expand"></i> View Full</button>
+                    </div>
+                  </div>
+                </div>
+              </div>  
 
             </div>
 
@@ -300,20 +371,24 @@
               <div class="slider-thumb-label">Startup Tripura</div>
             </div>
             <div class="slider-thumb-item" data-index="3">
-              <img src="images/pic3.jpeg" alt="NCC Honor thumbnail">
-              <div class="slider-thumb-label">NCC Honor</div>
-            </div>
-            <div class="slider-thumb-item" data-index="4">
               <img src="images/pic2.jpeg" alt="Cyber Security thumbnail">
               <div class="slider-thumb-label">Cyber Defense</div>
             </div>
-            <div class="slider-thumb-item" data-index="5">
+            <div class="slider-thumb-item" data-index="4">
               <img src="images/pic1.jpeg" alt="Keynote thumbnail">
               <div class="slider-thumb-label">Plenary Keynote</div>
             </div>
-            <div class="slider-thumb-item" data-index="6">
+            <div class="slider-thumb-item" data-index="5">
               <img src="images/pic5.jpeg" alt="Drone Training thumbnail">
-              <div class="slider-thumb-label">Drone Workshop</div>
+              <div class="slider-thumb-label">Cyber Workshop</div>
+            </div>
+            <div class="slider-thumb-item" data-index="6">
+              <img src="images/pic8.jpeg" alt="Cyber">
+              <div class="slider-thumb-label">Cyber Workshop</div>
+            </div>
+            <div class="slider-thumb-item" data-index="6">
+              <img src="images/pic9.jpeg" alt="Cyber">
+              <div class="slider-thumb-label">Project demo</div>
             </div>
           </div>
         </div>
@@ -931,7 +1006,7 @@
       <div style="display: flex; align-items: center; gap: 0.75rem;">
         <img src="images/avatar.jpg" alt="Ronit Paul" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover; border: 1px solid var(--accent-sky);">
         <div>
-          <span style="font-weight: 700; color: var(--text-main);">Ronit Paul</span> &bull; Computer Science Engineer &bull; Agartala, India
+          <strong style="color: #ffffff;">Ronit Paul</strong> &bull; <span style="color: #cbd5e1;">Computer Science Engineer &bull; Agartala, India</span>
         </div>
       </div>
       <div class="footer-links">
