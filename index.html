@@ -13,10 +13,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
-  <!-- Typography: Playfair Display + Plus Jakarta Sans + JetBrains Mono -->
+  <!-- Typography: Google Sans + Google Sans Text + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -66,6 +66,9 @@
     </div>
   </div>
 
+  <!-- Top Viewport Scroll Progress Bar -->
+  <div id="scrollProgressBar" class="scroll-progress-bar" aria-hidden="true"></div>
+
   <!-- ==========================================================================
        Navigation Bar (Custom Avatar Icon in Place of Navbar Name)
        ========================================================================== -->
@@ -107,16 +110,30 @@
          Hero Section
          ========================================================================== -->
     <section id="home" class="hero">
+      <!-- Ambient Lighting & Tech Mesh -->
+      <div class="hero-ambient-glow glow-1"></div>
+      <div class="hero-ambient-glow glow-2"></div>
+      <div class="hero-grid-mesh"></div>
+
       <div class="container">
         <div class="hero-grid">
           <div class="hero-content">
-            <span class="hero-eyebrow">Portfolio &amp; Engineering Works</span>
-            <h1 class="hero-name">Ronit Paul</h1>
-            <p class="hero-subtitle">
-              Computer Science Engineer, AI Developer, Trainer and Certified Drone Trainer building high-impact systems .
+            <!-- Availability Radar Status Pill -->
+            <div class="hero-status-pill reveal reveal-fade-up">
+              <span class="status-radar-ping"></span>
+              <span class="status-radar-dot"></span>
+              <span>Available for Applied AI &amp; Avionics Engineering</span>
+            </div>
+
+            <span class="hero-eyebrow reveal reveal-fade-up stagger-1">Portfolio &amp; Engineering Works</span>
+            <h1 class="hero-name reveal reveal-fade-up stagger-2">
+              Ronit <span class="gradient-text">Paul</span>
+            </h1>
+            <p class="hero-subtitle reveal reveal-fade-up stagger-3">
+              Computer Science Engineer, AI Developer, and Certified Drone Trainer building high-impact production systems.
             </p>
 
-            <div class="hero-creds-strip">
+            <div class="hero-creds-strip reveal reveal-fade-up stagger-4">
               <div class="hero-cred-item">
                 <i class="fa-solid fa-building-columns"></i>
                 <span>NIELIT Agartala</span>
@@ -131,7 +148,7 @@
               </div>
             </div>
 
-            <div class="hero-actions">
+            <div class="hero-actions reveal reveal-fade-up stagger-5">
               <a href="#projects" class="btn btn-primary">
                 View Projects
               </a>
@@ -141,14 +158,24 @@
             </div>
           </div>
 
-          <!-- Hero Portrait Card -->
-          <div class="hero-portrait">
+          <!-- Hero Portrait Card with Floating Micro-Badges -->
+          <div class="hero-portrait reveal reveal-scale stagger-2">
+            <!-- Floating Tech Chips -->
+            <div class="floating-badge badge-top-left">
+              <i class="fa-solid fa-bolt"></i>
+              <span>NIELIT Resource Person</span>
+            </div>
+            <div class="floating-badge badge-bottom-right">
+              <i class="fa-solid fa-helicopter"></i>
+              <span>DGCA Drone Trainer</span>
+            </div>
+
             <div class="hero-portrait-card">
               <div class="portrait-photo-box">
                 <img src="images/pic3.jpeg" alt="Ronit Paul receiving CATC-118 Memento from 15 Tripura BN NCC Officer">
                 <div class="portrait-info-overlay">
                   <h3 class="portrait-name">Ronit Paul</h3>
-                  <p class="portrait-role">Developer & Trainer</p>
+                  <p class="portrait-role">Developer &amp; Trainer</p>
                   <div class="portrait-socials">
                     <a href="https://linkedin.com/in/Ronit_paul" target="_blank" rel="noopener noreferrer" class="portrait-social-btn" aria-label="LinkedIn Profile">
                       <i class="fa-brands fa-linkedin-in"></i>
@@ -169,6 +196,15 @@
           </div>
         </div>
       </div>
+
+      <!-- Bouncing Hero Scroll Indicator -->
+      <a href="#gallery" class="hero-scroll-indicator" aria-label="Scroll to next section">
+        <span class="scroll-indicator-mouse">
+          <span class="scroll-indicator-wheel"></span>
+        </span>
+        <span class="scroll-indicator-text">Scroll Down</span>
+        <i class="fa-solid fa-chevron-down scroll-indicator-arrow"></i>
+      </a>
     </section>
 
     <!-- ==========================================================================
@@ -176,7 +212,7 @@
          ========================================================================== -->
     <section id="gallery" class="section">
       <div class="container">
-        <div class="section-header text-center">
+        <div class="section-header text-center reveal reveal-fade-up">
           <span class="section-tag">Documented Engagements</span>
           <h2 class="section-title">Field Demonstrations &amp; Institutional Keynotes</h2>
           <p class="section-desc">
@@ -184,7 +220,7 @@
           </p>
         </div>
 
-        <div class="slider-container">
+        <div class="slider-container reveal reveal-scale stagger-1">
           <div class="slider-main" role="region" aria-label="Field Highlights Carousel">
             <div class="slider-track">
 
@@ -400,7 +436,7 @@
          ========================================================================== -->
     <section id="about" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal reveal-fade-up">
           <span class="section-tag">Profile &amp; Background</span>
           <h2 class="section-title">Engineering Discipline with Practical Grounding</h2>
           <p class="section-desc">
@@ -408,38 +444,70 @@
           </p>
         </div>
 
+        <!-- Impact Metrics Bar with Animated Counters -->
+        <div class="impact-metrics-bar reveal reveal-fade-up stagger-1">
+          <div class="metric-item">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-counter="500">0</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <span class="metric-label">Cadets &amp; Students Trained</span>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-counter="4">0</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <span class="metric-label">Specialized Systems</span>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-counter="3">0</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <span class="metric-label">Years Field Experience</span>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number-wrap">
+              <span class="metric-number" data-counter="100">0</span>
+              <span class="metric-suffix">%</span>
+            </div>
+            <span class="metric-label">Operational Reliability</span>
+          </div>
+        </div>
+
         <div class="about-layout">
           <div>
-            <p class="about-bio-lead">
+            <p class="about-bio-lead reveal reveal-fade-up stagger-2">
               "Passionate learner, developer, and drone trainer who enjoys building useful technology, sharing knowledge, and helping others grow through practical skills and real-world experience."
             </p>
-            <p class="about-bio-text">
+            <p class="about-bio-text reveal reveal-fade-up stagger-3">
               Based in Agartala, India, I operate at the intersection of applied artificial intelligence, enterprise software engineering, and drone hardware systems. As a Resource Person at NIELIT Agartala and a Trainer at the Drone Technology Centre of TIT, I combine academic rigor with field-tested implementation.
             </p>
-            <p class="about-bio-text">
+            <p class="about-bio-text reveal reveal-fade-up stagger-4">
               My engineering portfolio encompasses live institutional web systems like <strong>AMS (Attendance Management System)</strong> deployed at NIELIT Agartala, healthcare diagnostic platforms (SmartDiag), accessibility tools for hearing-impaired citizens (SignVert), and technical training for national cadet corps and engineering students.
             </p>
 
             <div class="about-pillars">
-              <div class="pillar-item">
+              <div class="pillar-item reveal reveal-fade-up stagger-1">
                 <h4 class="pillar-title">Production Web Systems</h4>
                 <p class="pillar-desc">Progressive Web Apps (PWAs), high-availability institutional portals (AMS), batch tracking, and secure role-based services.</p>
               </div>
-              <div class="pillar-item">
+              <div class="pillar-item reveal reveal-fade-up stagger-2">
                 <h4 class="pillar-title">Machine Intelligence</h4>
                 <p class="pillar-desc">Computer vision, document OCR, classification modeling, AutoAI, and IBM Watson cloud integration.</p>
               </div>
-              <div class="pillar-item">
+              <div class="pillar-item reveal reveal-fade-up stagger-3">
                 <h4 class="pillar-title">Drone Avionics</h4>
                 <p class="pillar-desc">Airframe construction, electronic speed controllers, telemetry calibration, and flight instruction.</p>
               </div>
-              <div class="pillar-item">
+              <div class="pillar-item reveal reveal-fade-up stagger-4">
                 <h4 class="pillar-title">Technical Education</h4>
                 <p class="pillar-desc">Curriculum development, cybersecurity awareness, and over 500+ cadets and students trained.</p>
               </div>
             </div>
 
-            <div class="languages-strip">
+            <div class="languages-strip reveal reveal-fade-up stagger-3">
               <span class="lang-label">Languages:</span>
               <div class="lang-items">
                 <span class="lang-tag">English (Full Professional)</span>
@@ -451,7 +519,7 @@
 
           <!-- Education -->
           <div class="education-group">
-            <div class="education-card">
+            <div class="education-card reveal reveal-fade-left stagger-2">
               <span class="edu-level">Undergraduate Degree</span>
               <h3 class="edu-degree">Bachelor of Technology (B.Tech)</h3>
               <p class="edu-school">Tripura Institute of Technology (TIT)</p>
@@ -460,7 +528,7 @@
               </div>
             </div>
 
-            <div class="education-card">
+            <div class="education-card reveal reveal-fade-left stagger-3">
               <span class="edu-level">State Polytechnic Diploma</span>
               <h3 class="edu-degree">Diploma in Computer Science &amp; Technology</h3>
               <p class="edu-school">National Institute of Electronics &amp; Information Technology (NIELIT)</p>
@@ -478,7 +546,7 @@
          ========================================================================== -->
     <section id="experience" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal reveal-fade-up">
           <span class="section-tag">Career History</span>
           <h2 class="section-title">Professional Experience</h2>
           <p class="section-desc">
@@ -487,9 +555,11 @@
         </div>
 
         <div class="timeline-stream">
+          <!-- Dynamic Scroll-Triggered Progress Line -->
+          <div class="timeline-progress-line" id="timelineProgressLine"></div>
 
           <!-- Exp 1 -->
-          <div class="timeline-row">
+          <div class="timeline-row reveal reveal-fade-up stagger-1">
             <div class="timeline-node"></div>
             <div class="timeline-card">
               <div class="timeline-card-header">
@@ -509,7 +579,7 @@
           </div>
 
           <!-- Exp 2 -->
-          <div class="timeline-row">
+          <div class="timeline-row reveal reveal-fade-up stagger-2">
             <div class="timeline-node"></div>
             <div class="timeline-card">
               <div class="timeline-card-header">
@@ -528,7 +598,7 @@
           </div>
 
           <!-- Exp 3 -->
-          <div class="timeline-row">
+          <div class="timeline-row reveal reveal-fade-up stagger-3">
             <div class="timeline-node"></div>
             <div class="timeline-card">
               <div class="timeline-card-header">
@@ -547,7 +617,7 @@
           </div>
 
           <!-- Exp 4 -->
-          <div class="timeline-row">
+          <div class="timeline-row reveal reveal-fade-up stagger-4">
             <div class="timeline-node"></div>
             <div class="timeline-card">
               <div class="timeline-card-header">
@@ -574,7 +644,7 @@
          ========================================================================== -->
     <section id="projects" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal reveal-fade-up">
           <span class="section-tag">Engineering Portfolio</span>
           <h2 class="section-title">Categorized Engineering Projects</h2>
           <p class="section-desc">
@@ -583,7 +653,7 @@
         </div>
 
         <!-- Distinct Category Filters -->
-        <div class="filter-tabs">
+        <div class="filter-tabs reveal reveal-fade-up stagger-1">
           <button class="filter-tab active" data-filter="all">All Works</button>
           <button class="filter-tab" data-filter="live-systems">Live Institutional Systems</button>
           <button class="filter-tab" data-filter="ai-health">AI &amp; Clinical Diagnostics</button>
@@ -594,7 +664,7 @@
         <div class="projects-grid">
 
           <!-- Project 1: AMS (Attendance Management System) - FEATURED & LIVE -->
-          <div class="project-card featured" data-category="live-systems">
+          <div class="project-card featured reveal reveal-fade-up stagger-1" data-category="live-systems">
             <div class="project-img-box" style="background: linear-gradient(135deg, #0f1f3d 0%, #162a52 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem;">
               <div style="width: 64px; height: 64px; border-radius: 12px; background: rgba(37, 99, 235, 0.25); border: 1px solid rgba(56, 189, 248, 0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem;">
                 <i class="fa-solid fa-clipboard-user" style="font-size: 2rem; color: #38bdf8;"></i>
@@ -628,7 +698,7 @@
           </div>
 
           <!-- Project 2: SmartDiag (AI Healthcare) -->
-          <div class="project-card" data-category="ai-health">
+          <div class="project-card reveal reveal-fade-up stagger-2" data-category="ai-health">
             <div class="project-img-box">
               <img src="images/pic4.jpeg" alt="SmartDiag AI Project Demonstration">
               <div class="project-status-pill scheme">
@@ -656,7 +726,7 @@
           </div>
 
           <!-- Project 3: SignVert (Assistive Tech) -->
-          <div class="project-card" data-category="accessibility">
+          <div class="project-card reveal reveal-fade-up stagger-3" data-category="accessibility">
             <div class="project-img-box">
               <img src="images/pic6.jpeg" alt="SignVert Assistive AI Project">
               <div class="project-status-pill scheme">
@@ -684,7 +754,7 @@
           </div>
 
           <!-- Project 4: Omni Rover (Robotics) -->
-          <div class="project-card" data-category="accessibility">
+          <div class="project-card reveal reveal-fade-up stagger-4" data-category="accessibility">
             <div class="project-img-box">
               <img src="images/pic7.jpeg" alt="Omni Autonomous Rover Platform at Startup Tripura">
               <div class="project-status-pill scheme">
@@ -712,7 +782,7 @@
           </div>
 
           <!-- Project 5: STQC MIS (Enterprise Backend) -->
-          <div class="project-card" data-category="live-systems">
+          <div class="project-card reveal reveal-fade-up stagger-1" data-category="live-systems">
             <div class="project-img-box" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0c1527; padding: 2rem;">
               <div style="width: 60px; height: 60px; border-radius: 12px; background: rgba(30, 58, 138, 0.3); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
                 <i class="fa-solid fa-server" style="font-size: 1.8rem; color: #60a5fa;"></i>
@@ -739,7 +809,7 @@
           </div>
 
           <!-- Project 6: KeyGuard (Security) -->
-          <div class="project-card" data-category="systems">
+          <div class="project-card reveal reveal-fade-up stagger-2" data-category="systems">
             <div class="project-img-box" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0b1222; padding: 2rem;">
               <div style="width: 60px; height: 60px; border-radius: 12px; background: rgba(37, 99, 235, 0.2); border: 1px solid rgba(56, 189, 248, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
                 <i class="fa-solid fa-shield-halved" style="font-size: 1.8rem; color: #38bdf8;"></i>
@@ -766,7 +836,7 @@
           </div>
 
           <!-- Project 7: NIELIT Esports & Trusvider -->
-          <div class="project-card" data-category="systems">
+          <div class="project-card reveal reveal-fade-up stagger-3" data-category="systems">
             <div class="project-img-box" style="display: flex; flex-direction: column; align-items: center; justify-content: center; background: #09101e; padding: 2rem;">
               <div style="width: 60px; height: 60px; border-radius: 12px; background: rgba(30, 58, 138, 0.25); border: 1px solid rgba(96, 165, 250, 0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
                 <i class="fa-solid fa-gamepad" style="font-size: 1.8rem; color: #93c5fd;"></i>
@@ -801,7 +871,7 @@
          ========================================================================== -->
     <section id="skills" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal reveal-fade-up">
           <span class="section-tag">Technical Competencies</span>
           <h2 class="section-title">Skills &amp; Methodologies</h2>
           <p class="section-desc">
@@ -811,46 +881,94 @@
 
         <div class="skills-grid">
           <!-- Col 1 -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-scale stagger-1">
             <h3 class="skill-category-title"><i class="fa-solid fa-code"></i> Languages &amp; Core</h3>
             <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">Python</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-row"><span class="skill-name">C / C++</span><span class="skill-level">Proficient</span></div>
-              <div class="skill-row"><span class="skill-name">PHP</span><span class="skill-level">Proficient</span></div>
-              <div class="skill-row"><span class="skill-name">Java</span><span class="skill-level">Intermediate</span></div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Python</span><span class="skill-percent">95%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="95%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">C / C++</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="85%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">PHP</span><span class="skill-percent">82%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="82%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Java</span><span class="skill-percent">75%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="75%"></div></div>
+              </div>
             </div>
           </div>
 
           <!-- Col 2 -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-scale stagger-2">
             <h3 class="skill-category-title"><i class="fa-solid fa-brain"></i> Machine Learning &amp; AI</h3>
             <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">Scikit-Learn (RF, SVM, KNN)</span><span class="skill-level">Advanced</span></div>
-              <div class="skill-row"><span class="skill-name">Tesseract OCR &amp; Vision</span><span class="skill-level">Proficient</span></div>
-              <div class="skill-row"><span class="skill-name">IBM Watson &amp; AutoAI</span><span class="skill-level">Certified</span></div>
-              <div class="skill-row"><span class="skill-name">Language Modeling</span><span class="skill-level">Intermediate</span></div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Scikit-Learn (RF, SVM, KNN)</span><span class="skill-percent">92%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="92%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Tesseract OCR &amp; Vision</span><span class="skill-percent">88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="88%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">IBM Watson &amp; AutoAI</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="85%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Language Modeling</span><span class="skill-percent">78%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="78%"></div></div>
+              </div>
             </div>
           </div>
 
           <!-- Col 3 -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-scale stagger-3">
             <h3 class="skill-category-title"><i class="fa-solid fa-globe"></i> Web &amp; Databases</h3>
             <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">Django Framework</span><span class="skill-level">Proficient</span></div>
-              <div class="skill-row"><span class="skill-name">Progressive Web Apps (PWAs)</span><span class="skill-level">Production</span></div>
-              <div class="skill-row"><span class="skill-name">Android Development</span><span class="skill-level">Certified</span></div>
-              <div class="skill-row"><span class="skill-name">DBMS (PostgreSQL, MySQL)</span><span class="skill-level">Proficient</span></div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Django Framework</span><span class="skill-percent">88%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="88%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Progressive Web Apps (PWAs)</span><span class="skill-percent">92%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="92%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Android Development</span><span class="skill-percent">78%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="78%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">DBMS (PostgreSQL, MySQL)</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="85%"></div></div>
+              </div>
             </div>
           </div>
 
           <!-- Col 4 -->
-          <div class="skill-category-card">
+          <div class="skill-category-card reveal reveal-scale stagger-4">
             <h3 class="skill-category-title"><i class="fa-solid fa-helicopter"></i> Hardware &amp; Operations</h3>
             <div class="skill-list">
-              <div class="skill-row"><span class="skill-name">Drone Assembly &amp; ESCs</span><span class="skill-level">Instructor</span></div>
-              <div class="skill-row"><span class="skill-name">Flight Telemetry &amp; Piloting</span><span class="skill-level">Lead Trainer</span></div>
-              <div class="skill-row"><span class="skill-name">Networking &amp; Servers</span><span class="skill-level">Certified</span></div>
-              <div class="skill-row"><span class="skill-name">Git &amp; Version Control</span><span class="skill-level">Proficient</span></div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Drone Assembly &amp; ESCs</span><span class="skill-percent">96%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="96%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Flight Telemetry &amp; Piloting</span><span class="skill-percent">98%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="98%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Networking &amp; Servers</span><span class="skill-percent">85%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="85%"></div></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-info"><span class="skill-name">Git &amp; Version Control</span><span class="skill-percent">90%</span></div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-skill-width="90%"></div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -862,7 +980,7 @@
          ========================================================================== -->
     <section id="credentials" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal reveal-fade-up">
           <span class="section-tag">Accreditations</span>
           <h2 class="section-title">Certifications &amp; Institutional Honors</h2>
           <p class="section-desc">
@@ -871,37 +989,37 @@
         </div>
 
         <div class="certs-grid">
-          <div class="cert-card">
+          <div class="cert-card reveal reveal-fade-up stagger-1">
             <span class="cert-issuer">IBM</span>
             <h3 class="cert-title">IBM Machine Learning for Data Science Projects</h3>
             <span class="cert-date">07/2024 &ndash; 07/2024</span>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card reveal reveal-fade-up stagger-2">
             <span class="cert-issuer">NPTEL / Swayam</span>
             <h3 class="cert-title">Machine Learning for Engineering and Science Applications</h3>
             <span class="cert-date">01/2024 &ndash; 04/2024</span>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card reveal reveal-fade-up stagger-3">
             <span class="cert-issuer">15 Tripura BN NCC</span>
             <h3 class="cert-title">CATC-118 Memento of Gratitude</h3>
             <span class="cert-date">Distinguished Guest Trainer</span>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card reveal reveal-fade-up stagger-4">
             <span class="cert-issuer">Industrial Training Division</span>
             <h3 class="cert-title">Industrial Training in JAVA Programming</h3>
             <span class="cert-date">06/2021 &ndash; 06/2021</span>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card reveal reveal-fade-up stagger-5">
             <span class="cert-issuer">Technical Training Authority</span>
             <h3 class="cert-title">Networking and Server Management</h3>
             <span class="cert-date">11/2021 &ndash; 12/2021</span>
           </div>
 
-          <div class="cert-card">
+          <div class="cert-card reveal reveal-fade-up stagger-6">
             <span class="cert-issuer">NIELIT</span>
             <h3 class="cert-title">Basic Android App Development</h3>
             <span class="cert-date">01/2022 &ndash; 10/2022</span>
@@ -915,7 +1033,7 @@
          ========================================================================== -->
     <section id="contact" class="section" style="border-bottom: none;">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal reveal-fade-up">
           <span class="section-tag">Get in Touch</span>
           <h2 class="section-title">Inquiries &amp; Consultations</h2>
           <p class="section-desc">
@@ -924,7 +1042,7 @@
         </div>
 
         <div class="contact-layout">
-          <div class="contact-card">
+          <div class="contact-card reveal reveal-fade-left">
             <h3 class="contact-title">Contact Channels</h3>
             <p class="contact-desc">
               Direct inquiries regarding software consulting, research partnerships, or keynote invitations may be directed to the following channels:
@@ -933,7 +1051,14 @@
             <div class="contact-list">
               <div class="contact-entry">
                 <span class="contact-label">Electronic Mail</span>
-                <a href="mailto:paulronit3280@gmail.com" class="contact-link">paulronit3280@gmail.com</a>
+                <div class="email-copy-wrap">
+                  <a href="mailto:paulronit3280@gmail.com" class="contact-link" id="emailContactText">paulronit3280@gmail.com</a>
+                  <button type="button" class="btn-copy-email" id="copyEmailBtn" aria-label="Copy email address" title="Copy to clipboard">
+                    <i class="fa-regular fa-copy"></i>
+                    <span class="copy-text">Copy</span>
+                    <span class="copy-tooltip" id="copyTooltip">Copied!</span>
+                  </button>
+                </div>
               </div>
 
               <div class="contact-entry">
@@ -963,7 +1088,7 @@
           </div>
 
           <!-- Contact Form -->
-          <div class="contact-card">
+          <div class="contact-card reveal reveal-fade-right">
             <h3 class="contact-title" style="margin-bottom: 1.5rem;">Direct Message</h3>
             <div id="formStatus" class="form-status"></div>
 
@@ -1031,6 +1156,51 @@
       <div id="lightboxCaption" class="lightbox-caption"></div>
     </div>
   </div>
+
+  <!-- Floating Side Dot Navigation (Frame Switcher) -->
+  <nav class="side-dots-nav" aria-label="Section frame navigation" id="sideDotsNav">
+    <a href="#home" class="side-dot active" data-section="home" aria-label="Navigate to Home">
+      <span class="dot-label">Home</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#gallery" class="side-dot" data-section="gallery" aria-label="Navigate to Field Work">
+      <span class="dot-label">Field Work</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#about" class="side-dot" data-section="about" aria-label="Navigate to About">
+      <span class="dot-label">About</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#experience" class="side-dot" data-section="experience" aria-label="Navigate to Experience">
+      <span class="dot-label">Experience</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#projects" class="side-dot" data-section="projects" aria-label="Navigate to Projects">
+      <span class="dot-label">Projects</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#skills" class="side-dot" data-section="skills" aria-label="Navigate to Skills">
+      <span class="dot-label">Skills</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#credentials" class="side-dot" data-section="credentials" aria-label="Navigate to Credentials">
+      <span class="dot-label">Credentials</span>
+      <span class="dot-circle"></span>
+    </a>
+    <a href="#contact" class="side-dot" data-section="contact" aria-label="Navigate to Contact">
+      <span class="dot-label">Contact</span>
+      <span class="dot-circle"></span>
+    </a>
+  </nav>
+
+  <!-- Floating Back-to-Top Button with Circular Scroll Progress -->
+  <button id="backToTop" class="back-to-top" aria-label="Scroll to top" title="Back to top">
+    <svg class="back-to-top-svg" viewBox="0 0 48 48">
+      <circle class="back-to-top-circle-bg" cx="24" cy="24" r="20"></circle>
+      <circle id="backToTopProgress" class="back-to-top-circle-fill" cx="24" cy="24" r="20"></circle>
+    </svg>
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <!-- Scripts -->
   <script src="js/slider.js"></script>
