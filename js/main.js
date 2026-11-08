@@ -613,10 +613,10 @@ function initSectionScrollEngine() {
     }, cooldownDuration);
   }
 
-  // Intercept Wheel on Desktop (width >= 992px)
+  // Intercept Wheel on Desktop (width > 1024px)
   window.addEventListener('wheel', (e) => {
-    // Only intercept on desktop and when modal is not active
-    if (window.innerWidth < 992) return;
+    // Only intercept on large desktop screens and when modal is not active
+    if (window.innerWidth <= 1024) return;
     if (lightboxModal && lightboxModal.classList.contains('active')) return;
 
     const now = performance.now();
@@ -671,7 +671,7 @@ function initSectionScrollEngine() {
 
   // Keyboard navigation
   window.addEventListener('keydown', (e) => {
-    if (window.innerWidth < 992) return;
+    if (window.innerWidth <= 1024) return;
     if (lightboxModal && lightboxModal.classList.contains('active')) return;
     // Don't intercept if user is typing in form inputs
     if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
