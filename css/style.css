@@ -1812,12 +1812,13 @@ button {
    Footer - Google Clean Grounding Anchor with 4-Color Stripe
    ========================================================================== */
 .footer {
-  background: var(--bg-secondary);
-  color: var(--text-muted);
-  padding: 3.5rem 0;
+  background: #ffffff;
+  color: var(--text-main);
+  padding: 4rem 0 2.5rem 0;
   border-top: 1px solid var(--border-medium);
   position: relative;
   scroll-snap-align: end;
+  box-shadow: 0 -2px 10px rgba(60, 64, 67, 0.05);
 }
 
 .footer::before {
@@ -1826,38 +1827,166 @@ button {
   top: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 3.5px;
   background: var(--google-4color);
 }
 
-.footer-inner {
+.footer-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  font-size: 0.875rem;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-.footer-inner p {
-  color: var(--text-muted);
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 540px;
 }
 
-.footer-inner strong {
+.footer-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.footer-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--google-blue);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.footer-avatar-wrap:hover .footer-avatar {
+  transform: scale(1.06);
+  box-shadow: 0 0 12px rgba(26, 115, 232, 0.35);
+}
+
+.footer-brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
   color: var(--text-main);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.footer-role {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3c4043;
+  line-height: 1.4;
+}
+
+.footer-location {
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+}
+
+.footer-location i {
+  color: var(--google-red);
+  font-size: 0.8rem;
+}
+
+.footer-nav-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-heading {
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
 }
 
 .footer-links {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
 }
 
-.footer-links a {
-  color: var(--text-muted);
+.footer-link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  background: var(--bg-secondary);
+  color: #202124;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.08);
 }
 
-.footer-links a:hover {
+.footer-link-pill i {
   color: var(--google-blue);
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-link-pill:hover {
+  background: var(--google-blue-tint);
+  color: var(--google-blue-hover);
+  border-color: var(--google-blue-border);
+  transform: translateY(-1.5px);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer-link-pill:hover i {
+  transform: scale(1.15);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-top: 2rem;
+  font-size: 0.85rem;
+}
+
+.footer-copyright {
+  color: #5f6368;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.footer-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--google-green-tint);
+  border: 1px solid #ceead6;
+  border-radius: var(--radius-pill);
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: #137333;
 }
 
 /* ==========================================================================
@@ -2271,15 +2400,21 @@ button {
     padding: 1.5rem;
   }
 
-  .footer-inner {
+  .footer-top {
     flex-direction: column;
-    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
   }
 
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
   }
 }
 
